@@ -67,25 +67,6 @@ yesButton.addEventListener("click", function () {
         <div class="yes-screen">
             <h1 class="yes-text"></h1>
             <img src="images/hug.png" alt="拥抱" class="yes-image">
-            <form class="info-form" id="infoForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
         </div>
     `;
 
@@ -94,17 +75,4 @@ yesButton.addEventListener("click", function () {
 
   // 禁止滚动，保持页面美观
   document.body.style.overflow = "hidden";
-
-  // 表单提交事件
-  document.getElementById("infoForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      date: document.getElementById("date").value,
-    };
-    console.log("Form submitted:", formData);
-    alert("谢谢你填写！♡︎ᐝ(>᎑< )");
-  });
 });
